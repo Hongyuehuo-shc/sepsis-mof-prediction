@@ -1,0 +1,14 @@
+{
+  "title": "Development and Validation of an Early Prediction Model for Sepsis-Associated Multiple Organ Failure Using Ensemble Machine Learning and Feature Interaction Analysis",
+  "data_source": "MIMIC-IV v3.1 local credentialed release",
+  "population": "Adult ICU stays meeting formal Sepsis-3 criteria by the prediction index",
+  "prediction_index": "24 hours after ICU admission",
+  "prediction_horizon": "48 hours after prediction index",
+  "primary_outcome": "New MOF: at least two distinct organ systems simultaneously having SOFA organ score >=2 at an hourly assessment during the horizon",
+  "exclusion": ["Age under 18 years", "Sepsis-3 not present by prediction index", "MOF present by prediction index", "Missing required identifiers or time fields"],
+  "development": "Patient-level development, validation, and locked test splitting",
+  "candidate_models": ["Logistic regression", "Random forest", "Extra trees", "Histogram gradient boosting", "Soft-voting ensemble"],
+  "primary_metrics": ["AUROC", "AUPRC", "Brier score", "Calibration", "Decision curve analysis"],
+  "interpretation": ["Permutation importance", "SHAP global explanation", "SHAP interaction analysis", "Individual SHAP explanations"],
+  "reproducibility": "All commands must be run through study.py and recorded in results/provenance/runs.jsonl"
+}

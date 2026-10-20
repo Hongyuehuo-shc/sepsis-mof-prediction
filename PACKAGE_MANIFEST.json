@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-20T13:07:09.698862+00:00",
+  "excluded": [
+    "data/",
+    ".venv/",
+    "raw MIMIC-IV/eICU data",
+    "patient-level derived files",
+    "trained model binaries",
+    "local provenance logs and machine-specific paths"
+  ],
+  "included": [
+    "README.md",
+    "PIPELINE.md",
+    "requirements.txt",
+    "study.py",
+    "configs",
+    "scripts",
+    "src",
+    "webapp/",
+    "tests/",
+    "ANALYSIS_PLAN.json",
+    "DATA_AVAILABILITY.md"
+  ]
+}

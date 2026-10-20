@@ -1,0 +1,35 @@
+{
+  "study": {
+    "min_age": 18,
+    "feature_window_hours": 24,
+    "prediction_horizon_hours": 48,
+    "organ_sofa_threshold": 2,
+    "organs_required_for_mof": 2,
+    "random_seed": 2026
+  },
+  "columns": {
+    "stay_id": "stay_id",
+    "age": "age",
+    "sepsis_flag": "sepsis3_flag",
+    "feature_window_end": "feature_window_end",
+    "mof_assessment_time": "mof_assessment_time",
+    "outcome": "mof_within_horizon",
+    "organ_sofa": [
+      "sofa_respiratory",
+      "sofa_coagulation",
+      "sofa_liver",
+      "sofa_cardiovascular",
+      "sofa_cns",
+      "sofa_renal"
+    ]
+  },
+  "predictor_exclusions": [
+    "subject_id", "hadm_id", "stay_id", "sepsis3_flag", "feature_window_end",
+    "mof_assessment_time", "mof_within_horizon", "organ_failures_after_index",
+    "organ_failures_at_index", "sepsis_icd_screen_flag", "sofa_time", "outtime",
+    "los", "hospital_expire_flag", "split",
+    "sofa_respiratory", "sofa_coagulation", "sofa_liver", "sofa_cardiovascular",
+    "sofa_cns", "sofa_renal"
+  ],
+  "categorical_predictors": ["gender", "race", "admission_type", "first_careunit"]
+}
